@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SKt-QR-Q7z">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--QR Code Generator-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="05Y-5U-P8W">
+                                <rect key="frame" x="16" y="84" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yme-mf-F2p">
+                                <rect key="frame" x="239" y="130" width="120" height="30"/>
+                                <color key="backgroundColor" red="0.95294117649999999" green="0.61176470589999998" blue="0.070588235289999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Generate">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RKb-Ap-AVd"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Dm-Db-UiZ">
+                                <rect key="frame" x="87" y="233" width="200" height="200"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="0Ke-T2-3ul"/>
+                                    <constraint firstAttribute="width" constant="200" id="eul-fI-dRT"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="tVZ-5B-rNF" appends="YES" id="KfT-Mm-SCc"/>
+                                </connections>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="NCf-FP-XZJ">
+                                <rect key="frame" x="68" y="574" width="239" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="4wL-nA-fEU"/>
+                                    <constraint firstAttribute="width" constant="235" id="QOr-AV-rWf"/>
+                                </constraints>
+                                <color key="minimumTrackTintColor" red="0.75294117650000003" green="0.22352941179999999" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="thumbTintColor" red="0.82745098039999998" green="0.3294117647" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="changeScale:" destination="BYZ-38-t0r" eventType="valueChanged" id="Msm-Lk-urf"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="05Y-5U-P8W" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="FMH-gJ-amF"/>
+                            <constraint firstItem="05Y-5U-P8W" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="K8s-It-ip2"/>
+                            <constraint firstItem="0Dm-Db-UiZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Pid-1u-gfB"/>
+                            <constraint firstItem="yme-mf-F2p" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="239" id="dYp-jt-QOR"/>
+                            <constraint firstItem="yme-mf-F2p" firstAttribute="top" secondItem="05Y-5U-P8W" secondAttribute="bottom" constant="16" id="g6K-Kb-ftV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NCf-FP-XZJ" secondAttribute="bottom" constant="63" id="j5G-ui-CYM"/>
+                            <constraint firstItem="05Y-5U-P8W" firstAttribute="trailing" secondItem="yme-mf-F2p" secondAttribute="trailing" id="q4S-Oc-Fql"/>
+                            <constraint firstItem="0Dm-Db-UiZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rkd-LR-VFZ"/>
+                            <constraint firstItem="05Y-5U-P8W" firstAttribute="centerX" secondItem="0Dm-Db-UiZ" secondAttribute="centerX" id="sR0-D0-Sd9"/>
+                            <constraint firstItem="NCf-FP-XZJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uDg-L5-uPI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="QR Code Generator" id="esB-Q6-pgy"/>
+                    <connections>
+                        <outlet property="button" destination="yme-mf-F2p" id="er4-94-avh"/>
+                        <outlet property="imageView" destination="0Dm-Db-UiZ" id="IXC-VC-gvh"/>
+                        <outlet property="slider" destination="NCf-FP-XZJ" id="y9l-yV-m1A"/>
+                        <outlet property="textField" destination="05Y-5U-P8W" id="1py-F7-kCk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="tVZ-5B-rNF">
+                    <connections>
+                        <action selector="tap:" destination="BYZ-38-t0r" id="z3c-UR-BSY"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="457" y="-36"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="f9v-6N-nIe">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SKt-QR-Q7z" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qhV-PC-3m8">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="zpw-2L-gkZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xWl-CF-Jq1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-375" y="-35"/>
+        </scene>
+    </scenes>
+</document>
