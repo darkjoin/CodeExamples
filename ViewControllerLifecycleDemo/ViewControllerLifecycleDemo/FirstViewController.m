@@ -60,7 +60,7 @@
     NSLog(@"%s, %i", __PRETTY_FUNCTION__, __LINE__);
     [super viewDidLoad];
     
-    [self setup];
+//    [self setup];   // add Present/Push to Next button
     NSLog(@"%s, %i", __PRETTY_FUNCTION__, __LINE__);
     
 }
@@ -117,9 +117,10 @@
 - (void)setup
 {
     UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
-    button.frame = CGRectMake(0, 0, 150, 70);
+    button.frame = CGRectMake(0, 0, 200, 70);
     button.center = self.view.center;
-    [button setTitle:@"Next" forState:UIControlStateNormal];
+    [button setTitle:@"Present to Next" forState:UIControlStateNormal]; // present
+//    [button setTitle:@"Push to Next" forState:UIControlStateNormal];    // push
     button.titleLabel.font = [UIFont systemFontOfSize:30.0];
     [button addTarget:self action:@selector(next) forControlEvents:UIControlEventTouchUpInside];
     
@@ -128,7 +129,11 @@
 
 - (void)next
 {
-    [self presentViewController:[[SecondViewController alloc] init] animated:YES completion:nil];
+    [self presentViewController:[[SecondViewController alloc] init] animated:YES completion:nil]; // present
+
+//    [self.navigationController pushViewController:[[SecondViewController alloc] init] animated:YES]; // push with animated
+    
+//    [self.navigationController pushViewController:[[SecondViewController alloc] init] animated:NO]; // push without animated
 }
 
 @end

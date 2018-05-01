@@ -59,7 +59,7 @@
     NSLog(@"%s, %i", __PRETTY_FUNCTION__, __LINE__);
     [super viewDidLoad];
     
-    [self setup];
+//    [self setup];   // add dismiss button
     NSLog(@"%s, %i", __PRETTY_FUNCTION__, __LINE__);
     
 }
@@ -113,7 +113,7 @@
     NSLog(@"%s, %i", __PRETTY_FUNCTION__, __LINE__);
 }
 
-- (IBAction)back:(UIButton *)sender
+- (IBAction)dismiss:(UIButton *)sender
 {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
@@ -121,16 +121,16 @@
 - (void)setup
 {
     UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
-    button.frame = CGRectMake(0, 0, 150, 70);
+    button.frame = CGRectMake(0, 0, 200, 70);
     button.center = self.view.center;
-    [button setTitle:@"Back" forState:UIControlStateNormal];
+    [button setTitle:@"Dismiss" forState:UIControlStateNormal];
     button.titleLabel.font = [UIFont systemFontOfSize:30.0];
-    [button addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
+    [button addTarget:self action:@selector(dismiss) forControlEvents:UIControlEventTouchUpInside];
     
     [self.view addSubview:button];
 }
 
-- (void)back
+- (void)dismiss
 {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
