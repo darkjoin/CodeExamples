@@ -156,6 +156,7 @@
 }
 
 #pragma mark - AVCaptureMetadataOutputObjectsDelegate
+
 // qrcode
 - (void)captureOutput:(AVCaptureOutput *)output didOutputMetadataObjects:(NSArray<__kindof AVMetadataObject *> *)metadataObjects fromConnection:(AVCaptureConnection *)connection
 {
@@ -163,20 +164,29 @@
         AVMetadataMachineReadableCodeObject *metadataObject = metadataObjects.firstObject;
         if ([[metadataObject type] isEqualToString:AVMetadataObjectTypeQRCode]) {
             NSString *message = [metadataObject stringValue];
-            // display message
-            [self performSelectorOnMainThread:@selector(displayMessage:) withObject:message waitUntilDone:YES];
-
+            
+            // stop scanning
             [self performSelectorOnMainThread:@selector(stopScanning) withObject:nil waitUntilDone:NO];
-            [self.startStopButton performSelectorOnMainThread:@selector(setTitle:) withObject:@"Start" waitUntilDone:NO];
-            self.isReading = NO;
-
+            
             // play sound
             if (self.audioPlayer) {
                 [self.audioPlayer play];
             }
+
+            // display message
+            [self performSelectorOnMainThread:@selector(displayMessage:) withObject:message waitUntilDone:YES];
+
+            [self.startStopButton performSelectorOnMainThread:@selector(setTitle:) withObject:@"Start" waitUntilDone:NO];
+            self.isReading = NO;
+
+//            // play sound
+//            if (self.audioPlayer) {
+//                [self.audioPlayer play];
+//            }
         }
     }
 }
+
 
 /*
 // barcode
