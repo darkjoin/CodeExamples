@@ -14,4 +14,4 @@ build/
 xcuserdata/
 *.moved-aside
 
-Pods/
+*/Pods/
