@@ -13,6 +13,7 @@ class MainViewController: UIViewController {
     
     var itemProviders: [NSItemProvider] = []
     var iterator: IndexingIterator<[NSItemProvider]>?
+    var currentItemProvider: NSItemProvider?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,7 @@ class MainViewController: UIViewController {
         view.addSubview(contentView)
         
         contentView.addSubview(imageView)
+        contentView.addSubview(livePhotoView)
         contentView.addSubview(playerView)
     }
     
@@ -48,9 +50,10 @@ class MainViewController: UIViewController {
     /// 展示UIImagePickerController
     /// - Parameter button: button
     @objc private func showUIImagePickerController(_ button: UIButton) {
+        // 如果要选择livePhoto，需要mediaTypes中添加com.apple.live-photo，并且allowsEditing为false，否则会展示为普通图片
         let picker = UIImagePickerController()
-        picker.mediaTypes = ["public.movie", "public.image"] // 选择的媒体类型
-        picker.allowsEditing = true
+        picker.mediaTypes = ["public.movie", "public.image", "com.apple.live-photo"] // 选择的媒体类型
+//        picker.allowsEditing = true
         picker.sourceType = .photoLibrary
         picker.delegate = self
         self.present(picker, animated: true, completion: nil)
@@ -85,11 +88,21 @@ class MainViewController: UIViewController {
         let imageView = UIImageView()
         imageView.clipsToBounds = true
         imageView.contentMode = .scaleAspectFill
+        imageView.isHidden = true
         return imageView
+    }()
+    
+    lazy var livePhotoView: PHLivePhotoView = {
+        let view = PHLivePhotoView()
+        view.clipsToBounds = true
+        view.contentMode = .scaleAspectFill
+        view.isHidden = true
+        return view
     }()
 
     lazy var playerView: UIView = {
         let view = UIView()
+        view.isHidden = true
         return view
     }()
 }
@@ -99,12 +112,18 @@ extension MainViewController {
     /// 展示选择的下一个内容
     private func displayNextItem() {
         if let itemProvider = iterator?.next() {
-            if itemProvider.canLoadObject(ofClass: UIImage.self) { // image
+            if itemProvider.canLoadObject(ofClass: PHLivePhoto.self) { // livePhoto
+                itemProvider.loadObject(ofClass: PHLivePhoto.self) { [weak self] (livePhoto, error) in
+                    DispatchQueue.main.async {
+                        guard let self = self, let livePhoto = livePhoto as? PHLivePhoto else { return }
+                        self.display(livePhoto: livePhoto)
+                    }
+                }
+            } else if itemProvider.canLoadObject(ofClass: UIImage.self) { // image
                 itemProvider.loadObject(ofClass: UIImage.self) { [weak self] (image, error) in
                     DispatchQueue.main.async {
                         guard let self = self, let image = image as? UIImage else { return }
-                        self.contentView.bringSubviewToFront(self.imageView)
-                        self.imageView.image = image
+                        self.display(image: image)
                     }
                 }
             } else { // video
@@ -114,12 +133,24 @@ extension MainViewController {
                     let newURL = URL(fileURLWithPath: NSTemporaryDirectory() + fileName)
                     try? FileManager.default.copyItem(at: url, to: newURL)
                     DispatchQueue.main.async {
-                        self.contentView.bringSubviewToFront(self.playerView)
-                        self.playVideo(newURL)
+                        self.display(videoURL: newURL)
                     }
                 }
             }
         }
+    }
+    
+    private func display(livePhoto: PHLivePhoto? = nil, image: UIImage? = nil, videoURL: URL? = nil) {
+        livePhotoView.livePhoto = livePhoto
+        livePhotoView.isHidden = livePhoto == nil
+        
+        imageView.image = image
+        imageView.isHidden = image == nil
+        
+        if videoURL != nil {
+            self.playVideo(videoURL!)
+        }
+        playerView.isHidden = videoURL == nil
     }
     
     /// 播放视频
@@ -162,6 +193,12 @@ extension MainViewController {
         imageView.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
         imageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
         
+        livePhotoView.translatesAutoresizingMaskIntoConstraints = false
+        livePhotoView.leftAnchor.constraint(equalTo: contentView.leftAnchor).isActive = true
+        livePhotoView.rightAnchor.constraint(equalTo: contentView.rightAnchor).isActive = true
+        livePhotoView.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
+        livePhotoView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
+        
         playerView.translatesAutoresizingMaskIntoConstraints = false
         playerView.leftAnchor.constraint(equalTo: contentView.leftAnchor).isActive = true
         playerView.rightAnchor.constraint(equalTo: contentView.rightAnchor).isActive = true
@@ -186,17 +223,20 @@ extension MainViewController: UIImagePickerControllerDelegate, UINavigationContr
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         dismiss(animated: true, completion: nil)
         
-        if let image = info[.originalImage] as? UIImage { // image
+        if let livePhoto = info[.livePhoto] as? PHLivePhoto { // livePhoto
             DispatchQueue.main.async { [weak self] in
                 guard let self = self else { return }
-                self.contentView.bringSubviewToFront(self.imageView)
-                self.imageView.image = image
+                self.display(livePhoto: livePhoto)
+            }
+        } else if let image = info[.originalImage] as? UIImage { // image
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else { return }
+                self.display(image: image)
             }
         } else if let url = info[.mediaURL] as? URL { // video
             DispatchQueue.main.async { [weak self] in
                 guard let self = self else { return }
-                self.contentView.bringSubviewToFront(self.playerView)
-                self.playVideo(url)
+                self.display(videoURL: url)
             }
         } else {
             return
