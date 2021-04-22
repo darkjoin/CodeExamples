@@ -1,0 +1,413 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		33BB67A3F7614FC7CA3BE8AE /* Pods_ThirdPartLoginDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAC65D69DD6235A4F400E364 /* Pods_ThirdPartLoginDemo.framework */; };
+		3AAF67482629B8FA00D1EB66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAF67472629B8FA00D1EB66 /* AppDelegate.swift */; };
+		3AAF67512629B8FB00D1EB66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AAF67502629B8FB00D1EB66 /* Assets.xcassets */; };
+		3AAF67602629BA3800D1EB66 /* LineLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAF675D2629BA3700D1EB66 /* LineLogin.swift */; };
+		3AAF67612629BA3800D1EB66 /* AppleLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAF675E2629BA3700D1EB66 /* AppleLogin.swift */; };
+		3AAF67622629BA3800D1EB66 /* FacebookLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAF675F2629BA3800D1EB66 /* FacebookLogin.swift */; };
+		3AAF67722629BF5100D1EB66 /* LaunchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAF67712629BF5100D1EB66 /* LaunchService.swift */; };
+		3AAF67752629C01C00D1EB66 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAF67742629C01C00D1EB66 /* LoginController.swift */; };
+		3AAF67782629C02800D1EB66 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAF67772629C02800D1EB66 /* HomeController.swift */; };
+		3AEA00DF262FD5F400F89441 /* CustomLoginItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEA00DE262FD5F400F89441 /* CustomLoginItemsView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3AAF67442629B8F900D1EB66 /* ThirdPartLoginDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThirdPartLoginDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AAF67472629B8FA00D1EB66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3AAF67502629B8FB00D1EB66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3AAF67552629B8FB00D1EB66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AAF675D2629BA3700D1EB66 /* LineLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineLogin.swift; sourceTree = "<group>"; };
+		3AAF675E2629BA3700D1EB66 /* AppleLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleLogin.swift; sourceTree = "<group>"; };
+		3AAF675F2629BA3800D1EB66 /* FacebookLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookLogin.swift; sourceTree = "<group>"; };
+		3AAF67712629BF5100D1EB66 /* LaunchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchService.swift; sourceTree = "<group>"; };
+		3AAF67742629C01C00D1EB66 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		3AAF67772629C02800D1EB66 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		3AEA00DE262FD5F400F89441 /* CustomLoginItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLoginItemsView.swift; sourceTree = "<group>"; };
+		3AEA00E12630270400F89441 /* ThirdPartLoginDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ThirdPartLoginDemo.entitlements; sourceTree = "<group>"; };
+		90AB27E5036B9669E823768D /* Pods-ThirdPartLoginDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThirdPartLoginDemo.debug.xcconfig"; path = "Target Support Files/Pods-ThirdPartLoginDemo/Pods-ThirdPartLoginDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		9FA9EEEE4EB21C2B19B9B47E /* Pods-ThirdPartLoginDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThirdPartLoginDemo.release.xcconfig"; path = "Target Support Files/Pods-ThirdPartLoginDemo/Pods-ThirdPartLoginDemo.release.xcconfig"; sourceTree = "<group>"; };
+		CAC65D69DD6235A4F400E364 /* Pods_ThirdPartLoginDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThirdPartLoginDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3AAF67412629B8F900D1EB66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33BB67A3F7614FC7CA3BE8AE /* Pods_ThirdPartLoginDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1F260D93AFCCCBA7ACB63AE4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CAC65D69DD6235A4F400E364 /* Pods_ThirdPartLoginDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		27FAB0E046A53AA637CD148F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				90AB27E5036B9669E823768D /* Pods-ThirdPartLoginDemo.debug.xcconfig */,
+				9FA9EEEE4EB21C2B19B9B47E /* Pods-ThirdPartLoginDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		3AAF673B2629B8F900D1EB66 = {
+			isa = PBXGroup;
+			children = (
+				3AAF67462629B8F900D1EB66 /* ThirdPartLoginDemo */,
+				3AAF67452629B8F900D1EB66 /* Products */,
+				27FAB0E046A53AA637CD148F /* Pods */,
+				1F260D93AFCCCBA7ACB63AE4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3AAF67452629B8F900D1EB66 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3AAF67442629B8F900D1EB66 /* ThirdPartLoginDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3AAF67462629B8F900D1EB66 /* ThirdPartLoginDemo */ = {
+			isa = PBXGroup;
+			children = (
+				3AEA00E12630270400F89441 /* ThirdPartLoginDemo.entitlements */,
+				3AAF67472629B8FA00D1EB66 /* AppDelegate.swift */,
+				3AAF67742629C01C00D1EB66 /* LoginController.swift */,
+				3AAF67772629C02800D1EB66 /* HomeController.swift */,
+				3AAF67712629BF5100D1EB66 /* LaunchService.swift */,
+				3AEA00DE262FD5F400F89441 /* CustomLoginItemsView.swift */,
+				3AAF675E2629BA3700D1EB66 /* AppleLogin.swift */,
+				3AAF675F2629BA3800D1EB66 /* FacebookLogin.swift */,
+				3AAF675D2629BA3700D1EB66 /* LineLogin.swift */,
+				3AAF67502629B8FB00D1EB66 /* Assets.xcassets */,
+				3AAF67552629B8FB00D1EB66 /* Info.plist */,
+			);
+			path = ThirdPartLoginDemo;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3AAF67432629B8F900D1EB66 /* ThirdPartLoginDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3AAF67582629B8FB00D1EB66 /* Build configuration list for PBXNativeTarget "ThirdPartLoginDemo" */;
+			buildPhases = (
+				9DFE69F377AF2627CE57EC06 /* [CP] Check Pods Manifest.lock */,
+				3AAF67402629B8F900D1EB66 /* Sources */,
+				3AAF67412629B8F900D1EB66 /* Frameworks */,
+				3AAF67422629B8F900D1EB66 /* Resources */,
+				109ED2DD4DE50C20BC574273 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ThirdPartLoginDemo;
+			productName = ThirdPartLoginDemo;
+			productReference = 3AAF67442629B8F900D1EB66 /* ThirdPartLoginDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3AAF673C2629B8F900D1EB66 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					3AAF67432629B8F900D1EB66 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = 3AAF673F2629B8F900D1EB66 /* Build configuration list for PBXProject "ThirdPartLoginDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3AAF673B2629B8F900D1EB66;
+			productRefGroup = 3AAF67452629B8F900D1EB66 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3AAF67432629B8F900D1EB66 /* ThirdPartLoginDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3AAF67422629B8F900D1EB66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AAF67512629B8FB00D1EB66 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		109ED2DD4DE50C20BC574273 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ThirdPartLoginDemo/Pods-ThirdPartLoginDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ThirdPartLoginDemo/Pods-ThirdPartLoginDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ThirdPartLoginDemo/Pods-ThirdPartLoginDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9DFE69F377AF2627CE57EC06 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ThirdPartLoginDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3AAF67402629B8F900D1EB66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AAF67722629BF5100D1EB66 /* LaunchService.swift in Sources */,
+				3AAF67622629BA3800D1EB66 /* FacebookLogin.swift in Sources */,
+				3AAF67482629B8FA00D1EB66 /* AppDelegate.swift in Sources */,
+				3AAF67782629C02800D1EB66 /* HomeController.swift in Sources */,
+				3AAF67752629C01C00D1EB66 /* LoginController.swift in Sources */,
+				3AAF67602629BA3800D1EB66 /* LineLogin.swift in Sources */,
+				3AEA00DF262FD5F400F89441 /* CustomLoginItemsView.swift in Sources */,
+				3AAF67612629BA3800D1EB66 /* AppleLogin.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		3AAF67562629B8FB00D1EB66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3AAF67572629B8FB00D1EB66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3AAF67592629B8FB00D1EB66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90AB27E5036B9669E823768D /* Pods-ThirdPartLoginDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ThirdPartLoginDemo/ThirdPartLoginDemo.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NFLSYRSGK7;
+				INFOPLIST_FILE = ThirdPartLoginDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = darkgm.ThirdPartLoginDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3AAF675A2629B8FB00D1EB66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FA9EEEE4EB21C2B19B9B47E /* Pods-ThirdPartLoginDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ThirdPartLoginDemo/ThirdPartLoginDemo.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NFLSYRSGK7;
+				INFOPLIST_FILE = ThirdPartLoginDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = darkgm.ThirdPartLoginDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3AAF673F2629B8F900D1EB66 /* Build configuration list for PBXProject "ThirdPartLoginDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AAF67562629B8FB00D1EB66 /* Debug */,
+				3AAF67572629B8FB00D1EB66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3AAF67582629B8FB00D1EB66 /* Build configuration list for PBXNativeTarget "ThirdPartLoginDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AAF67592629B8FB00D1EB66 /* Debug */,
+				3AAF675A2629B8FB00D1EB66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3AAF673C2629B8F900D1EB66 /* Project object */;
+}

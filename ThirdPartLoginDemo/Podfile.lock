@@ -1,0 +1,41 @@
+PODS:
+  - FBSDKCoreKit (9.1.0):
+    - FBSDKCoreKit/Basics (= 9.1.0)
+    - FBSDKCoreKit/Core (= 9.1.0)
+  - FBSDKCoreKit/Basics (9.1.0)
+  - FBSDKCoreKit/Core (9.1.0):
+    - FBSDKCoreKit/Basics
+  - FBSDKLoginKit (9.1.0):
+    - FBSDKLoginKit/Login (= 9.1.0)
+  - FBSDKLoginKit/Login (9.1.0):
+    - FBSDKCoreKit (~> 9.1.0)
+  - JGProgressHUD (2.2)
+  - LineSDKSwift (5.7.0):
+    - LineSDKSwift/Core (= 5.7.0)
+  - LineSDKSwift/Core (5.7.0)
+  - SnapKit (5.0.1)
+
+DEPENDENCIES:
+  - FBSDKLoginKit
+  - JGProgressHUD
+  - LineSDKSwift
+  - SnapKit
+
+SPEC REPOS:
+  trunk:
+    - FBSDKCoreKit
+    - FBSDKLoginKit
+    - JGProgressHUD
+    - LineSDKSwift
+    - SnapKit
+
+SPEC CHECKSUMS:
+  FBSDKCoreKit: a00fe2efd780c195a5e09201bf51c56106245b40
+  FBSDKLoginKit: d98498c598ec09de657385a9349a1f21119b7f86
+  JGProgressHUD: d83d7a981b85d11205e19ff8ad5bb9c40571c847
+  LineSDKSwift: f9c232f89185b887b5725aa278325f3a23e33bbc
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+
+PODFILE CHECKSUM: d24b921f7b9270326e8601f0ab670da92c95a199
+
+COCOAPODS: 1.10.0
