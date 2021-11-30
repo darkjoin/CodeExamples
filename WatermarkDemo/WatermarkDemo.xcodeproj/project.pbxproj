@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3AA57D2527293C5E00BAEEFB /* testVideo.MOV in Resources */ = {isa = PBXBuildFile; fileRef = 3AA57D2427293C5E00BAEEFB /* testVideo.MOV */; };
 		3ABCA82E255526D4008D159A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABCA82D255526D4008D159A /* AppDelegate.swift */; };
 		3ABCA830255526D4008D159A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABCA82F255526D4008D159A /* SceneDelegate.swift */; };
 		3ABCA832255526D4008D159A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABCA831255526D4008D159A /* ViewController.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3AA57D2427293C5E00BAEEFB /* testVideo.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = testVideo.MOV; sourceTree = "<group>"; };
 		3ABCA82A255526D4008D159A /* WatermarkDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatermarkDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ABCA82D255526D4008D159A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3ABCA82F255526D4008D159A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				3ABCA836255526D6008D159A /* Assets.xcassets */,
 				3ABCA838255526D6008D159A /* LaunchScreen.storyboard */,
 				3ABCA83B255526D6008D159A /* Info.plist */,
+				3AA57D2427293C5E00BAEEFB /* testVideo.MOV */,
 			);
 			path = WatermarkDemo;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AA57D2527293C5E00BAEEFB /* testVideo.MOV in Resources */,
 				3ABCA83A255526D6008D159A /* LaunchScreen.storyboard in Resources */,
 				3ABCA837255526D6008D159A /* Assets.xcassets in Resources */,
 				3ABCA835255526D4008D159A /* Main.storyboard in Resources */,
